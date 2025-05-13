@@ -24,11 +24,11 @@ def blink_led(delay, duration=10):
 def main():
     switch.init()
     led.init()
-    while True:
-        if switch.read_slide_switch() == 1:
-            blink_led(0.2)
-        else:
-            blink_led(0.1, 5)
+    
+    if switch.read_slide_switch() == 1:
+        blink_led(0.2)
+    else:
+        blink_led(0.1, 5)
 
 # Main entry point
 if __name__ == "__main__":
